@@ -13,6 +13,15 @@ class contactController extends Controller
         return view('index', compact('contacts'));
     }
 
+    public function details(string|int $id, Contact $contact)
+    {
+        if(!$contact = $contact->getById($id)){
+            return back();
+        }
+
+        return view('contact/details', compact(['contact']));
+    }
+
     public function store()
     {
         return view('contact/index');

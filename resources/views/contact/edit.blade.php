@@ -15,12 +15,12 @@
             @csrf()
             @method('PUT')
             <div class="mb-3">
-            <label for="InputName" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" id="InputName" value="{{$contact->name}}">
+                <label for="InputName" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="InputName" value="{{$contact->name}}">
             </div>
             <div class="mb-3">
-            <label for="InputEmail" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" id="InputEmail" value="{{$contact->email}}">
+                <label for="InputEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="InputEmail" value="{{$contact->email}}">
             </div>
             <div class="mb-3">
                 <label for="InputContact" class="form-label">Contact</label>
