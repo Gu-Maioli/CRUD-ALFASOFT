@@ -13,7 +13,7 @@ class Contact extends Model
     use SoftDeletes;
 
     protected $table = 'contact';
-    protected $fillable = ['id','name','contact','email'];
+    protected $fillable = ['id', 'name', 'contact', 'email'];
 
     public function getAll()
     {
@@ -25,51 +25,39 @@ class Contact extends Model
         return $this->find($id);
     }
 
-    public function updateContact($data, $id)
+    public function updateContact($data)
     {
-        if($this->checkUniqueFieldsById($data, $id))
-        {
-            $this->update($data);
-            return true;
-        }
-
-        return false;
+        return $this->update($data);
     }
 
     public function addContact($data)
     {
-        if($this->checkUniqueFields($data))
-        {
-            $this->create($data);
-            return true;
-        }
-
-        return false;        
+        $this->create($data);
     }
 
-    private function checkUniqueFieldsById($data, $id) : bool
+    private function checkUniqueFieldsById($data, $id): bool
     {
         $contacts = DB::table('contact')
-                            ->where('id', '>', $id)
-                            ->orWhere('email', 'like', $data['email'])
-                            ->orWhere('contact', '=', $data['contact'])
-                            ->first();
-        
-        if(isset($contacts)){
+            ->where('id', '>', $id)
+            ->orWhere('email', 'like', $data['email'])
+            ->orWhere('contact', '=', $data['contact'])
+            ->first();
+
+        if (isset($contacts)) {
             return false;
         }
 
         return true;
     }
 
-    private function checkUniqueFields($data) : bool
+    private function checkUniqueFields($data): bool
     {
         $contacts = DB::table('contact')
-                            ->where('email', 'like', $data['email'])
-                            ->orWhere('contact', '=', $data['contact'])
-                            ->first();
-        
-        if(isset($contacts)){
+            ->where('email', 'like', $data['email'])
+            ->orWhere('contact', '=', $data['contact'])
+            ->first();
+
+        if (isset($contacts)) {
             return false;
         }
 

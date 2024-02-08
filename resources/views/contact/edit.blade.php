@@ -31,6 +31,11 @@
             </svg></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+      @if ($errors->any())
+          @foreach ($errors->all() as $error)
+              {{$error}}
+          @endforeach
+      @endif
     </div>
 </body>
 </html>
