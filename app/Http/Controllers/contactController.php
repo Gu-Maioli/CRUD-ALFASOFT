@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DTO\CreateContactDTO;
 use App\Http\Requests\CreateUpdateContact;
 use App\Models\Contact;
 use App\Services\ContactService;
@@ -10,13 +11,10 @@ use Illuminate\Http\Request;
 class contactController extends Controller
 {
 
-    public function __construct(protected ContactService $service)
-    {
-    }
-
     public function index(Contact $contact)
     {
         $contacts = $contact->getAll();
+
         return view('index', compact('contacts'));
     }
 
@@ -69,7 +67,6 @@ class contactController extends Controller
         }
 
         $contact->delete();
-
         return redirect()->route('index');
     }
 }
