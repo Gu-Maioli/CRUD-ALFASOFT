@@ -14,7 +14,11 @@
       <form action="{{route('create')}}" method="POST">
         @include('contact.partials.form')        
       </form>
-      <x-Alert/>
+
+      @if ($errors->any())
+        <x-Alert/>
+      @endif
+      
     </div>
   </body>
 </html>

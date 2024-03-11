@@ -15,9 +15,12 @@
             @method('PUT')
             @include('contact.partials.form', ['contact' => $contact])
       </form>
-      <x-Alert>
-        <!-- Pode enviar valor para o component criado (Alert) -->
-      </x-Alert>
+      
+      @if ($errors->any())  
+        <x-Alert>
+          <!-- Pode enviar valor para o component criado (Alert) -->
+        </x-Alert>
+      @endif
       
     </div>
 </body>

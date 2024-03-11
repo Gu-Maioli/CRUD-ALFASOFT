@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DTO\CreateContactDTO;
 use App\Http\Requests\CreateUpdateContact;
 use App\Models\Contact;
-use App\Services\ContactService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class contactController extends Controller
 {

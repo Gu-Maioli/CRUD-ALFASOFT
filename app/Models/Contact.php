@@ -17,7 +17,9 @@ class Contact extends Model
 
     public function getAll()
     {
-        return $this->all();
+        //return $this->all();
+
+        return DB::table('contact')->paginate(4);
     }
 
     public function getById($id)
