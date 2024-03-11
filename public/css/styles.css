@@ -1,0 +1,35 @@
+.sidebar {
+    background-color: #343a40; /* Cor de fundo do menu */
+    color: #fff; /* Cor do texto */
+    padding: 20px;
+    height: 80vh; /* Altura total da tela */
+    border-radius: 0px 1px 10px 0px;
+}
+
+.navbar-brand {
+    color: #fff; /* Cor do texto do logotipo */
+}
+
+.nav-link {
+    color: #fff; /* Cor dos links do menu */
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    padding: 10px 20px; /* Adiciona espaço interno ao botão */
+}
+
+.navbar-link-top {
+    border-radius: 0px 0px 10px 0px;
+}
+
+.nav-item {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens do menu */
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px;
+}
+
+.content {
+    width: calc(100% - 250px);
+    padding: 20px;
+}
