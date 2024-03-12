@@ -12,7 +12,7 @@
       <h1>Add contact</h1>
       <br>
       <form action="{{route('create')}}" method="POST">
-        @include('contact.partials.form')        
+        @include('contact.partials.form')
       </form>
 
       @if ($errors->any())

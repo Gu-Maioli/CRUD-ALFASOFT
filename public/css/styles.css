@@ -10,6 +10,10 @@
     color: #fff; /* Cor do texto do logotipo */
 }
 
+.menu-superior-links {
+    margin-left: 25vh;
+}
+
 .nav-link {
     color: #fff; /* Cor dos links do menu */
     border-radius: 20px; /* Arredonda os cantos do botão */
