@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [layoutInitialController::class, 'layoutInitial'])->name('layout.initial');
 
-Route::get('/contact', [contactController::class, 'index'])->name('contact.index');
+Route::get('/contact/index', [contactController::class, 'index'])->name('contact.index');
 Route::get('/contact/store', [contactController::class, 'store'])->name('index.store');
 Route::get('/contact/{id}/edit', [contactController::class, 'edit'])->name('edit');
 Route::get('/contact/{id}/details', [contactController::class, 'details'])->name('details');

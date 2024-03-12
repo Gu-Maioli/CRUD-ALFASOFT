@@ -14,7 +14,7 @@
     <div class="row">
       <nav class="navbar navbar-link-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Meu Site</a>
+          <a class="navbar-brand" href="{{ route('layout.initial') }}">Meu Site</a>
 
           <div class="menu-superior-links collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">

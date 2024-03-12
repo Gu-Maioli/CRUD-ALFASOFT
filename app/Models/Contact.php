@@ -19,7 +19,7 @@ class Contact extends Model
     {
         //return $this->all();
 
-        return DB::table('contact')->paginate(4);
+        return DB::table('contact')->whereNull('deleted_at')->paginate(5);
     }
 
     public function getById($id)

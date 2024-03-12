@@ -14,7 +14,7 @@ class contactController extends Controller
     {
         $contacts = $contact->getAll();
 
-        return view('index', compact('contacts'));
+        return view('contact/index', compact('contacts'));
     }
 
     public function details(string|int $id, Contact $contact)
@@ -28,15 +28,14 @@ class contactController extends Controller
 
     public function store()
     {
-        return view('contact/index');
+        return view('contact/create');
     }
 
     public function create(CreateUpdateContact $request, Contact $contact)
     {
         $contact->addContact($request->validated());
-        $contacts = $contact->getAll();
 
-        return view('index', compact('contacts'));
+        return redirect()->route('contact.index');
     }
 
     public function edit(string|int $id, Contact $contact)
@@ -56,7 +55,7 @@ class contactController extends Controller
 
         $contact->updateContact($request->validated());
 
-        return redirect()->route('index');
+        return redirect()->route('contact.index');
     }
 
     public function delete(string|int $id, Contact $contact)
@@ -66,6 +65,6 @@ class contactController extends Controller
         }
 
         $contact->delete();
-        return redirect()->route('index');
+        return redirect()->route('contact.index');
     }
 }
