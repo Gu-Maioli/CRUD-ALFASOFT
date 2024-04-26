@@ -7,7 +7,7 @@ use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class contactController extends Controller
+class ContactController extends Controller
 {
 
     public function index(Contact $contact)

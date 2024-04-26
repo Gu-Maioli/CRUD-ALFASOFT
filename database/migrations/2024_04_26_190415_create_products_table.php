@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact', function (Blueprint $table) {
-
+        Schema::create('products', function (Blueprint $table) {
             $table->softDeletes();
 
             $table->id();
-            $table->string('name');
-            $table->integer('contact')->length(9)->unique();
-            $table->string('email')->unique();
+            $table->string('name', 80);
+            $table->string('description', 120);
+            $table->decimal('value', 10, 2);
+            $table->string('unit_of_measure'); // unit , meter and inch
             $table->timestamps();
         });
     }
@@ -28,8 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-        });
+        Schema::dropIfExists('products');
     }
 };

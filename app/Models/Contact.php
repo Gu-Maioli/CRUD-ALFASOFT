@@ -13,13 +13,14 @@ class Contact extends Model
     use SoftDeletes;
 
     protected $table = 'contact';
+    protected $dates = ['deleted_at'];
     protected $fillable = ['id', 'name', 'contact', 'email'];
 
     public function getAll()
     {
         //return $this->all();
 
-        return DB::table('contact')->whereNull('deleted_at')->paginate(5);
+        return self::whereNull('deleted_at')->paginate(5);
     }
 
     public function getById($id)
