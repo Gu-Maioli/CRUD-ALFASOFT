@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('conteudo')
-    <h1>Details contact</h1>
+    <h1>Details Contact</h1>
     <div class="mb-3">
         <label for="InputName" class="form-label">Name</label>
         <input disabled type="text" class="form-control" name="name" id="InputName" value="{{$contact->name}}">
@@ -21,14 +21,14 @@
             </svg>
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{{ route('edit', $contact->id) }}">
+        <a href="{{ route('contact.edit', $contact->id) }}">
             <button class="btn btn-success">
                 Edit
             </button>
         </a>
         <br>
         <br>
-        <form action="{{ route('delete', $contact->id) }}" method="POST">
+        <form action="{{ route('contact.delete', $contact->id) }}" method="POST">
             @csrf()
             @method('DELETE')
             <button type="submit" class="btn btn-danger">

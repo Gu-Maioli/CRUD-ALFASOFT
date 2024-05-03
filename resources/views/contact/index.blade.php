@@ -19,7 +19,7 @@
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->contact}}</td>
                 <td style="width: 5%">
-                    <a href="{{ route('edit', $contact->id) }}">
+                    <a href="{{ route('contact.edit', $contact->id) }}">
                         <button class="btn btn-success mx-1-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
                                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001"/>
@@ -28,7 +28,7 @@
                     </a>
                 </td>
                 <td style="width: 5%">
-                    <a href="{{ route('details', $contact->id) }}">
+                    <a href="{{ route('contact.details', $contact->id) }}">
                         <button class="btn btn-primary mx-1-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-exclamation" viewBox="0 0 16 16">
                                 <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
@@ -38,7 +38,7 @@
                     </a>
                 </td>
                 <td style="width: 5%">
-                    <form action="{{ route('delete', $contact->id) }}" method="POST">
+                    <form action="{{ route('contact.delete', $contact->id) }}" method="POST">
                         @csrf()
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger mx-1-auto">
@@ -56,7 +56,7 @@
     {{ $contacts->links() }}
 
     <br/>
-    <a href="{{ route('index.store') }}">
+    <a href="{{ route('contact.store') }}">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
             <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>

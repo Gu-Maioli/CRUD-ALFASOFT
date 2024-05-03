@@ -4,7 +4,7 @@
 
   <h1>Edit Contact</h1>
   <br>
-  <form action="{{route('update', $contact->id) }}" method="POST">
+  <form action="{{route('contact.update', $contact->id) }}" method="POST">
       @method('PUT')
       @include('contact.partials.form', ['contact' => $contact])
   </form>

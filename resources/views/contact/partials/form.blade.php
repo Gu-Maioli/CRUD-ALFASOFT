@@ -1,18 +1,18 @@
 @csrf()
 <div class="mb-3">
-<label for="InputName" class="form-label">Name</label>
-<input type="text" name="name" class="form-control" id="InputName"
-    value="{{ $contact->name ?? old('name')}}">
+    <label for="InputName" class="form-label">Name</label>
+    <input type="text" name="name" class="form-control" id="InputName"
+        value="{{ $contact->name ?? old('name')}}">
 </div>
 <div class="mb-3">
-<label for="InputEmail" class="form-label">Email address</label>
-<input type="email" class="form-control" id="InputEmail" name="email"
-    value="{{$contact->email ?? old('email')}}" >
-</div>
+    <label for="InputEmail" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="InputEmail" name="email"
+        value="{{$contact->email ?? old('email')}}" >
+</div> 
 <div class="mb-3">
-<label for="InputContact" class="form-label" >Contact</label>
-<input type="number" class="form-control" name="contact" id="InputContact"
-    value="{{$contact->contact ?? old('contact')}}">
+    <label for="InputContact" class="form-label" >Contact</label>
+    <input type="number" class="form-control" name="contact" id="InputContact"
+        value="{{$contact->contact ?? old('contact')}}">
 </div>
 <a href="{{ route('contact.index') }}">
 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">

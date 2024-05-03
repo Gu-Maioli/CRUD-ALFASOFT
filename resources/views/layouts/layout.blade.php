@@ -22,7 +22,7 @@
                 <a class="nav-link" href="{{ route('layout.initial') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">#</a>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@
             <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Página 2</a>
+            <a class="nav-link" href="{{ route('product.index')}}">Product</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Página 3</a>

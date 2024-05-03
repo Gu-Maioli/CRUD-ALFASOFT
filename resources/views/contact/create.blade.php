@@ -3,7 +3,7 @@
 @section('conteudo')
   <h1>Add contact</h1>
   <br>
-  <form action="{{route('create')}}" method="POST">
+  <form action="{{route('contact.create')}}" method="POST">
     @include('contact.partials.form')
   </form>
 
